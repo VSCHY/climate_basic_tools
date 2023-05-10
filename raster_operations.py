@@ -3,6 +3,7 @@ import rasterio
 from shapely.ops import transform
 import glob
 from rasterio.merge import merge
+from rasterio.mask import mask
 from pyproj import transform as tr
 from functools import partial
 import pyproj
