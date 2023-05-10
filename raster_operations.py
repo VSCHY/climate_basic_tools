@@ -17,7 +17,7 @@ poly = #polygon
 # Recut large tif files over a polygon
 
 try:
-    with rasterio.open() as src0:
+    with rasterio.open(filename_in) as src0:
         out_image, out_transform = mask(dataset=src0, shapes=[poly], crop=True)
         out_meta = src0.meta.copy()
     out_meta.update({"driver": "GTiff",
